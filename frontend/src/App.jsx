@@ -479,31 +479,6 @@ function App() {
         </div>
       </section>
 
-      {/* Readings Section */}
-      <section id="readings" className="readings">
-        <div className="container">
-          <h2 className="section-title">Mes Lectures Favorites</h2>
-          <div className="readings-grid">
-            {readings.map((category) => (
-              <div key={category.id} className="reading-category">
-                <div className="category-header">
-                  <span className="category-icon">{category.icon}</span>
-                  <h3 className="category-title">{category.category}</h3>
-                </div>
-                <div className="books-list">
-                  {category.books.map((book, index) => (
-                    <div key={index} className="book-item">
-                      <h4 className="book-title">{book.title}</h4>
-                      <p className="book-author">{book.authors}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
         <section id="contact" className="contact">
           <div className="container">
