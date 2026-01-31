@@ -31,5 +31,7 @@ jobs:
 
             cd frontend
 
+            docker stop contactpage_frontend || true
+            docker rm contactpage_frontend || true
             docker compose down || true
             docker compose up -d --build
