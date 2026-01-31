@@ -11,5 +11,5 @@ services:
       - n8n-network
 
 networks:
-  root_default:
+  n8n-network:
     external: true
