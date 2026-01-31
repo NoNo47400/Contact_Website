@@ -234,6 +234,46 @@ function App() {
     }
   ]
 
+  const readings = [
+    {
+      id: 1,
+      category: "Startup & Entrepreneuriat",
+      icon: "🚀",
+      books: [
+        { title: "Blitzscaling", authors: "Reid Hoffman et Chris Yeh" },
+        { title: "Objectif Mars !", authors: "Bruno Martinaud et Alain Bloch" }
+      ]
+    },
+    {
+      id: 2,
+      category: "Relations Humaines",
+      icon: "🤝",
+      books: [
+        { title: "Les langages de l'amour", authors: "Gary Chapman" },
+        { title: "The culture map", authors: "Erin Meyer" }
+      ]
+    },
+    {
+      id: 3,
+      category: "Géopolitique",
+      icon: "🌍",
+      books: [
+        { title: "L'aigle, le dragon et la crise planétaire", authors: "Jean-Michel Valantin" },
+        { title: "L'affolement du monde", authors: "Thomas Gomart" }
+      ]
+    },
+    {
+      id: 4,
+      category: "Fiction",
+      icon: "📚",
+      books: [
+        { title: "L'appel de Cthulhu", authors: "Howard Phillips Lovecraft" },
+        { title: "L'étranger", authors: "Albert Camus" },
+        { title: "Bonne nuit Punpun", authors: "Inio Asano" }
+      ]
+    }
+  ]
+
   return (
     <div className="app">
       {/* Navigation */}
@@ -245,6 +285,7 @@ function App() {
             <li><a href="#about" onClick={() => setActiveSection('about')} className={activeSection === 'about' ? 'active' : ''}>À propos</a></li>
             <li><a href="#projects" onClick={() => setActiveSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projets</a></li>
             <li><a href="#experience" onClick={() => setActiveSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>Expérience</a></li>
+            <li><a href="#readings" onClick={() => setActiveSection('readings')} className={activeSection === 'readings' ? 'active' : ''}>Lectures</a></li>
             <li><a href="#contact" onClick={() => setActiveSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
           </ul>
         </div>
@@ -288,6 +329,15 @@ function App() {
               <p>
                 Mon objectif est de participer à une innovation technologique significative, en contribuant à des projets qui ont un impact positif sur la société.
               </p>
+              <div className="about-personal">
+                <h4 className="about-personal-title">Et aussi</h4>
+                <p>
+                  Je suis un lecteur passionné sur des sujets variés : startup, relations humaines, géopolitique, et fiction. Consultez la <a href="#readings" onClick={() => setActiveSection('readings')} className="about-link">section Lectures</a> pour découvrir mes recommandations.
+                </p>
+                <p>
+                  Je fais de l’impression 3D avec ma Creality Ender 3, je voyage, et je fais de la musculation régulièrement.
+                </p>
+              </div>
             </div>
             <div className="skills-container">
               <div className="hard-skills-section">
@@ -400,6 +450,56 @@ function App() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Readings Section */}
+      <section id="readings" className="readings">
+        <div className="container">
+          <h2 className="section-title">Mes Lectures Favorites</h2>
+          <div className="readings-grid">
+            {readings.map((category) => (
+              <div key={category.id} className="reading-category">
+                <div className="category-header">
+                  <span className="category-icon">{category.icon}</span>
+                  <h3 className="category-title">{category.category}</h3>
+                </div>
+                <div className="books-list">
+                  {category.books.map((book, index) => (
+                    <div key={index} className="book-item">
+                      <h4 className="book-title">{book.title}</h4>
+                      <p className="book-author">{book.authors}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Readings Section */}
+      <section id="readings" className="readings">
+        <div className="container">
+          <h2 className="section-title">Mes Lectures Favorites</h2>
+          <div className="readings-grid">
+            {readings.map((category) => (
+              <div key={category.id} className="reading-category">
+                <div className="category-header">
+                  <span className="category-icon">{category.icon}</span>
+                  <h3 className="category-title">{category.category}</h3>
+                </div>
+                <div className="books-list">
+                  {category.books.map((book, index) => (
+                    <div key={index} className="book-item">
+                      <h4 className="book-title">{book.title}</h4>
+                      <p className="book-author">{book.authors}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

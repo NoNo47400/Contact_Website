@@ -1,0 +1,45 @@
+name: Deploy ContactPage
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            mkdir -p ~/contactpage
+            cd ~/contactpage
+
+            REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/NoNo47400/ContactPage.git"
+            if [ ! -d ".git" ]; then
+              echo "First installation..."
+              git clone $REPO_URL .
+            else
+              echo "Updating existing code..."
+              git remote set-url origin $REPO_URL
+              git pull
+            fi
+
+            cd frontend
+
+            docker build -t contactpage-frontend:latest .
+
+            if docker ps -a --format '{{.Names}}' | grep -q '^contactpage_frontend$'; then
+              docker stop contactpage_frontend
+              docker rm contactpage_frontend
+            fi
+
+            docker run -d \
+              --name contactpage_frontend \
+              --restart always \
+              -p 4173:80 \
+              contactpage-frontend:latest
