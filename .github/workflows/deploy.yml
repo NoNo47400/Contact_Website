@@ -31,16 +31,5 @@ jobs:
 
             cd frontend
 
-            docker build -t contactpage-frontend:latest .
-
-            if docker ps -a --format '{{.Names}}' | grep -q '^contactpage_frontend$'; then
-              docker stop contactpage_frontend
-              docker rm contactpage_frontend
-            fi
-
-            docker run -d \
-              --name contactpage_frontend \
-              --restart always \
-              --network root_default \
-              -p 1234:80 \
-              contactpage-frontend:latest
+            docker-compose down || true
+            docker-compose up -d --build

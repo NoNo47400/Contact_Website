@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  contactpage:
+    build: .
+    container_name: contactpage_frontend
+    restart: always
+    ports:
+      - "1234:80"
+    networks:
+      - n8n-network
+
+networks:
+  root_default:
+    external: true
