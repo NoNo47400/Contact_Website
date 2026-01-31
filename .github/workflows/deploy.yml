@@ -41,5 +41,6 @@ jobs:
             docker run -d \
               --name contactpage_frontend \
               --restart always \
+              --network root_default \
               -p 1234:80 \
               contactpage-frontend:latest
