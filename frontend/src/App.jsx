@@ -70,7 +70,7 @@ function App() {
       description: "Site portfolio regroupant mes projets et compétences.",
       tags: ["React", "Vite", "CSS3"],
       image: "🌐",
-      link: { url: "https://github.com/NoNo47400/ContactPage", label: "Voir sur GitHub" }
+      link: { url: "https://github.com/NoNo47400/Contact_Website", label: "Voir sur GitHub" }
     },
     {
       id: 6,
@@ -103,6 +103,46 @@ function App() {
       tags: ["C++", "Python", "ESP32", "Electronique"],
       image: "🤖",
       link: { url: "https://github.com/NoNo47400/WispersProject/tree/main", label: "Voir sur GitHub" }
+    },
+    {
+      id: 10,
+      title: "Développement d'un logiciel pour AOC Airbus",
+      description: "Développement d'un logiciel de vérification de conformité de trames pour l'AOC d'Airbus.",
+      tags: ["Python", "C", "DO-178C"],
+      image: "✈️",
+      link: { url: null, label: "Non disponible sous GitHub" }
+    },
+    {
+      id: 11,
+      title: "Robot de recharge autonome Continental",
+      description: "Contribution au développement d'un robot de recharge autonome pour véhicules électriques.",
+      tags: ["C", "Rust","Kalman", "Ultra Wide Band", "ROS2"],
+      image: "🚗",
+      link: { url: null, label: "Non disponible sous GitHub" }
+    },
+    {
+      id: 12,
+      title: "Réseau PAN UWB basse consommation",
+      description: "Développement d’un réseau personnel UWB ultra-basse consommation intégrant des états de veille intelligents, réduisant la consommation globale à moins de 30µA par cycle (MCU, accéléromètre, antenne inclus).",
+      tags: ["C", "STM32", "UWB", "Bare Metal"],
+      image: "🔋",
+      link: { url: null, label: "Non disponible sous GitHub" }
+    },
+    {
+      id: 13,
+      title: "Simulateur de réseau CAN",
+      description: "Développement d’un simulateur de réseau CAN pour tester et valider des équipements embarqués pour le compte d'un start-up dans le secteur agricole.",
+      tags: ["Python", "CAN"],
+      image: "🚜",
+      link: { url: null, label: "Non disponible sous GitHub" }
+    },
+    {
+      id: 14,
+      title: "Générateur automatisé de fichiers DBC",
+      description: "Création d’un générateur automatisé de fichiers DBC pour faciliter l’intégration et la configuration des systèmes CAN.",
+      tags: ["Python", "CAN", "DBC"],
+      image: "📁",
+      link: { url: null, label: "Non disponible sous GitHub" }
     }
   ]
 
@@ -124,6 +164,76 @@ function App() {
     { name: "Vision systémique", level: 90 }
   ]
 
+  const experiencePro = [
+    {
+      id: 1,
+      title: "Data Scientist (Apprentissage)",
+      organization: "Stellantis",
+      location: "Poissy, FR",
+      period: "Sept. 2025 – Sept. 2026",
+    },
+    {
+      id: 2,
+      title: "Ingénieur logiciel embarqué (Apprentissage)",
+      organization: "SII Sud-Ouest",
+      location: "Toulouse, FR",
+      period: "Sept. 2022 – Sept. 2025",
+    },
+    {
+      id: 3,
+      title: "Stagiaire en recherche",
+      organization: "ETS Montréal & Spark Microsystems",
+      location: "Montréal, QC, Canada",
+      period: "Juin. 2024 – Sept. 2024",
+    },
+    {
+      id: 4,
+      title: "Stagiaire technicien supérieur",
+      organization: "Agreenculture",
+      location: "Toulouse, FR",
+      period: "Avr. 2022 – Juil. 2022",
+    }
+  ]
+
+  const experienceAcademique = [
+    {
+      id: 1,
+      title: "Diplôme d’ingénieur en robotique",
+      organization: "ENSTA Paris",
+      period: "Sept. 2025 – Sept. 2026",
+      details: [
+        "Ingénierie système (MBSE), systèmes embarqués (MPSoC) et systèmes autonomes (apprentissage, perception, navigation)."
+      ]
+    },
+    {
+      id: 2,
+      title: "Diplôme d’ingénieur en automatique et électronique",
+      organization: "INSA Toulouse",
+      period: "Sept. 2022 – Sept. 2025",
+      details: [
+        "Programmation embarquée C/C++ sur microcontrôleurs, conception de circuits électroniques, réseaux et virtualisation."
+      ]
+    },
+    {
+      id: 3,
+      title: "Master de Recherche en Réseaux Embarqués et Objets Connectés",
+      organization: "ENSEEIHT",
+      period: "Sept. 2024 – Juil. 2025",
+      details: [
+        "Étude théorique, conception et analyse de réseaux pour systèmes embarqués critiques (incl. normes aéronautiques)."
+      ]
+    },
+    {
+      id: 4,
+      title: "DUT Génie Électrique et Informatique Industrielle",
+      organization: "IUT Paul Sabatier de Toulouse",
+      period: "Sept. 2020 – Juil. 2022",
+      details: [
+        "Étude des concepts fondamentaux en électronique et en développement embarqué."
+      ]
+    }
+  ]
+
   return (
     <div className="app">
       {/* Navigation */}
@@ -134,6 +244,7 @@ function App() {
             <li><a href="#home" onClick={() => setActiveSection('home')} className={activeSection === 'home' ? 'active' : ''}>Accueil</a></li>
             <li><a href="#about" onClick={() => setActiveSection('about')} className={activeSection === 'about' ? 'active' : ''}>À propos</a></li>
             <li><a href="#projects" onClick={() => setActiveSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projets</a></li>
+            <li><a href="#experience" onClick={() => setActiveSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>Expérience</a></li>
             <li><a href="#contact" onClick={() => setActiveSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
           </ul>
         </div>
@@ -242,6 +353,53 @@ function App() {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="experience">
+        <div className="container">
+          <h2 className="section-title">Expérience</h2>
+          <div className="experience-grid">
+            <div className="experience-column">
+              <h3 className="experience-subtitle">Expérience professionnelle</h3>
+              <div className="experience-list">
+                {experiencePro.map((exp) => (
+                  <div key={exp.id} className="experience-card">
+                    <div className="experience-header">
+                      <h4 className="experience-role">{exp.title}</h4>
+                      <span className="experience-period">{exp.period}</span>
+                    </div>
+                    <div className="experience-org">
+                      <span className="experience-company">{exp.organization}</span>
+                      <span className="experience-location">{exp.location}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="experience-column">
+              <h3 className="experience-subtitle">Expérience académique</h3>
+              <div className="experience-list">
+                {experienceAcademique.map((exp) => (
+                  <div key={exp.id} className="experience-card">
+                    <div className="experience-header">
+                      <h4 className="experience-role">{exp.title}</h4>
+                      <span className="experience-period">{exp.period}</span>
+                    </div>
+                    <div className="experience-org">
+                      <span className="experience-company">{exp.organization}</span>
+                    </div>
+                    <ul className="experience-details">
+                      {exp.details.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

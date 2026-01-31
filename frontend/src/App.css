@@ -406,6 +406,94 @@ section {
   font-weight: 500;
 }
 
+/* Experience Section */
+.experience {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.experience-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  border-color: #667eea;
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.experience-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+.experience-period {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.experience-org {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  color: #b0b0b0;
+}
+
+.experience-company {
+  font-weight: 600;
+}
+
+.experience-location {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.experience-details {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
 /* Contact Section */
 .contact {
   background: rgba(255, 255, 255, 0.02);
@@ -557,6 +645,10 @@ textarea.form-input {
   .skills-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
   }
 
   .projects-grid {
