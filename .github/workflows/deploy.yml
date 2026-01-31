@@ -19,7 +19,7 @@ jobs:
             mkdir -p ~/contactpage
             cd ~/contactpage
 
-            REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/NoNo47400/ContactPage.git"
+            REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/NoNo47400/Contact_Website.git"
             if [ ! -d ".git" ]; then
               echo "First installation..."
               git clone $REPO_URL .
