@@ -41,5 +41,5 @@ jobs:
             docker run -d \
               --name contactpage_frontend \
               --restart always \
-              -p 4173:80 \
+              -p 1234:80 \
               contactpage-frontend:latest
