@@ -4,6 +4,7 @@
 
 .app {
   width: 100%;
+  padding-top: 5rem;
 }
 
 /* Navbar */
@@ -283,6 +284,7 @@
 /* Section Styles */
 section {
   padding: 5rem 2rem;
+  scroll-margin-top: 5rem;
 }
 
 .container {
@@ -971,6 +973,10 @@ textarea.form-input {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .app {
+    padding-top: 8rem;
+  }
+
   .nav-links {
     gap: 0.75rem;
     flex-wrap: wrap;
@@ -1016,5 +1022,6 @@ textarea.form-input {
 
   section {
     padding: 3rem 1rem;
+    scroll-margin-top: 8rem;
   }
 }
