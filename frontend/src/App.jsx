@@ -38,7 +38,7 @@ function App() {
       description: "Startup co-fondée pour l'analyse risque environnemental des entreprises.",
       tags: ["React", "Python", "Supabase", "Docker"],
       image: "🌿",
-      link: { url: "https://github.com/yourusername/greenance", label: "Voir sur GitHub" }
+      link: { url: null, label: "Non disponible sous GitHub" }
     },
     {
       id: 2,
