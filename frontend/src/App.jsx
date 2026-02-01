@@ -295,7 +295,7 @@ function App() {
       <section id="home" className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Bonjour, je suis <br/> <span className="gradient-text">Noël Jumin</span>
+            Bonjour, je suis <br/> <span className="gradient-text" itemProp="name">Noël Jumin</span>
           </h1>
           <p className="hero-subtitle">
             Je suis passionné d'innovation et adore découvrir, apprendre et utiliser toutes sortes de technologies
