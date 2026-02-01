@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
+  const [isLocationFlipped, setIsLocationFlipped] = useState(false)
 
   useEffect(() => {
     // Créer un observer pour détecter les sections visibles
@@ -35,7 +36,7 @@ function App() {
     {
       id: 1,
       title: "Greenance",
-      description: "Startup co-fondée pour l'analyse risque environnemental des entreprises.",
+      description: "Startup co-fondée pour l'analyse du risque environnemental des entreprises.",
       tags: ["React", "Python", "Supabase", "Docker"],
       image: "🌿",
       link: { url: null, label: "Non disponible sous GitHub" }
@@ -59,7 +60,7 @@ function App() {
     {
       id: 4,
       title: "Enseignement sur le Federated Learning",
-      description: "Enseignnement en milieu industriel sur le Federated Learning et ses applications devant 80 personnes.",
+      description: "Enseignement en milieu industriel sur le Federated Learning et ses applications devant 80 personnes.",
       tags: ["Jupyter", "Python", "Centralized Learning", "Federated Learning"],
       image: "🧑🏻‍🏫",
       link: { url: null, label: "Non disponible sous GitHub" }
@@ -131,7 +132,7 @@ function App() {
     {
       id: 13,
       title: "Simulateur de réseau CAN",
-      description: "Développement d’un simulateur de réseau CAN pour tester et valider des équipements embarqués pour le compte d'un start-up dans le secteur agricole.",
+      description: "Développement d'un simulateur de réseau CAN pour tester et valider des équipements embarqués pour le compte d'une start-up dans le secteur agricole.",
       tags: ["Python", "CAN"],
       image: "🚜",
       link: { url: null, label: "Non disponible sous GitHub" }
@@ -297,6 +298,10 @@ function App() {
           <h1 className="hero-title">
             Bonjour, je suis <br/> <span className="gradient-text" itemProp="name">Noël Jumin</span>
           </h1>
+          <div className="status-badge">
+            <span className="status-dot pulsing"></span>
+            🔍 Recherche CDI/Mission · Disponible Octobre 2026
+          </div>
           <p className="hero-subtitle">
             Je suis passionné d'innovation et adore découvrir, apprendre et utiliser toutes sortes de technologies
           </p>
@@ -323,19 +328,26 @@ function App() {
                 J'aime relever des défis techniques et apprendre de nouvelles compétences.
               </p>
               <p>
-                Avec mes différentes expériences, j'ai acquis une vision globale de l'ingénierie logicielle, du bas niveau avec le développement bare metal, embarqué temps réel, mais aussi à un niveau plus haut avec la data analysis et le développement web.
-                Je développe aussi mes compétences en ingénierie système afin de développer une vision systèmique des projets et de comprendre leurs interactions avec leur environnement.
+                Avec mes différentes expériences, j'ai acquis une vision globale de l'ingénierie logicielle, du bas niveau avec le développement bare metal et embarqué temps réel, jusqu'au niveau applicatif avec l'analyse de données et le développement web.
+                Je développe également mes compétences en ingénierie système afin d'acquérir une vision systémique des projets et de comprendre leurs interactions avec leur environnement.
               </p>
               <p>
-                Mon objectif est de participer à une innovation technologique significative, en contribuant à des projets qui ont un impact positif sur la société.
+                Mon objectif est de participer à des innovations technologiques significatives qui ont un impact positif sur la société. J'aspire à travailler dans un environnement stimulant où je peux continuer à apprendre tout en contribuant au développement de solutions innovantes et souveraines.
               </p>
               <div className="about-personal">
                 <h4 className="about-personal-title">Et aussi</h4>
                 <p>
-                  Je suis un lecteur passionné sur des sujets variés : startup, relations humaines, géopolitique, et fiction. Consultez la <a href="#readings" onClick={() => setActiveSection('readings')} className="about-link">section Lectures</a> pour découvrir mes recommandations.
+                  Sur mon temps libre, je suis un lecteur passionné sur des sujets variés : startup, relations humaines, géopolitique, et fiction. Consultez la <a href="#readings" onClick={() => setActiveSection('readings')} className="about-link">section Lectures</a> pour découvrir mes recommandations.
                 </p>
                 <p>
-                  Je fais de l’impression 3D avec ma Creality Ender 3, je voyage, et je fais de la musculation régulièrement.
+                  J'aime aussi réaliser des impressions 3D avec ma propre imprimante (Creality Ender 3), ce qui me permet de concrétiser mes idées et de créer des objets personnalisés.
+                </p>
+                <p>
+                  J'accorde également une grande importance à ma santé physique et mentale, en pratiquant régulièrement de la musculation et en voyageant pour découvrir de nouvelles cultures et perspectives.
+                </p>
+                <p>
+                  Je travaille également mes capacités logique et créative à travers les jeux vidéo dans laquelle je puise une partie de mon inspiration.
+                  En parallèle, je développe aussi ces mêmes capacités lors de sessions de jeu de société avec mes amis où j'applique mes compétences en stratégie, créativité et médiation.
                 </p>
               </div>
             </div>
@@ -503,11 +515,26 @@ function App() {
             </a>
               </div>
             </div>
-            <div className="info-item">
-              <span className="info-icon">📍</span>
-              <div>
-            <h4>Localisation</h4>
-            <p>Massy, France</p>
+            <div className="info-item info-item-flip" onClick={() => setIsLocationFlipped(!isLocationFlipped)}>
+              <div className={`info-item-inner ${isLocationFlipped ? 'flipped' : ''}`}>
+                <div className="info-item-front">
+                  <span className="info-icon">📍</span>
+                  <div>
+                    <h4>Localisation</h4>
+                    <p>Massy, France</p>
+                  </div>
+                </div>
+                <div className="info-item-back">
+                  <span className="info-icon">🗺️</span>
+                  <div>
+                    <h4>Zones de mobilité</h4>
+                    <ul className="location-list">
+                      <li>Île-de-France</li>
+                      <li>Occitanie (Toulouse)</li>
+                      <li>Full Remote accepté</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="info-item">

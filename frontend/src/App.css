@@ -109,6 +109,54 @@
   margin-bottom: 2.5rem;
 }
 
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  margin: 1.5rem 0;
+  background: rgba(34, 197, 94, 0.1);
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  border-radius: 50px;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.95rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+  transition: all 0.3s ease;
+}
+
+.status-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+.status-dot.pulsing {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
@@ -698,6 +746,86 @@ textarea.form-input {
 
 .info-item a:hover {
   color: #667eea;
+}
+
+/* Flip Card for Location */
+.info-item-flip {
+  perspective: 1000px;
+  position: relative;
+  min-height: 250px;
+  overflow: visible;
+}
+
+.info-item-flip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 30px 30px 0;
+  border-color: transparent rgba(102, 126, 234, 0.5) transparent transparent;
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+  border-radius: 0 16px 0 0;
+}
+
+.info-item-flip:hover::after {
+  border-width: 0 40px 40px 0;
+  border-color: transparent rgba(102, 126, 234, 0.7) transparent transparent;
+}
+
+.info-item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.info-item-flip .flipped {
+  transform: rotateY(180deg);
+}
+
+.info-item-front,
+.info-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item-back {
+  transform: rotateY(180deg);
+}
+
+.location-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.location-list li {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.location-list li:before {
+  content: "📍 ";
+  margin-right: 0.3rem;
 }
 
 .contact-cv {
