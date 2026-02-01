@@ -518,6 +518,11 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="contact-cv">
+            <a href="/public/data/CV_Noel_Jumin.pdf" download className="btn btn-primary btn-cv">
+              📄 Télécharger mon CV
+            </a>
+          </div>
             </div>
           </div>
         </section>
