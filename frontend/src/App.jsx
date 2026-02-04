@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [isLocationFlipped, setIsLocationFlipped] = useState(false)
-  const [flippedProjectId, setFlippedProjectId] = useState(null)
+  const [flippedProjectIndex, setFlippedProjectIndex] = useState(null)
 
   useEffect(() => {
     // Créer un observer pour détecter les sections visibles
@@ -35,7 +35,6 @@ function App() {
 
   const projects = [
     {
-      id: 1,
       title: "Greenance",
       description: "Startup co-fondée pour l'analyse du risque environnemental des entreprises.",
       tags: ["React", "Python", "Supabase", "Docker"],
@@ -44,7 +43,14 @@ function App() {
       summary: "<p>Greenance est une startup que j'ai co-fondée avec pour objectif de fournir des analyses de risque environnemental des entreprises en fournissant un score quantitatif basé sur différentes bases de données et une analyse qualitative générée par IA.</p><p>Dans un écosystème aussi bouleversé que le nôtre, les catastrophes naturelles peuvent causer des dégâts à la population mais aussi à l'économie.</p><p>Notre plateforme web permet aux banques, principalement, d'évaluer l'impact environnemental de leurs portefeuilles et de prendre des décisions éclairées en matière d'investissement durable.</p>"
     },
     {
-      id: 2,
+      title: "Sentinelle",
+      description: "Site web de veille géopolitique et technologique avec scraping automatisé.",
+      tags: ["React", "Supabase", "Docker", "Scraping"],
+      image: "<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10'/><path d='M12 8v4'/><path d='M12 16h.01'/></svg>\" />,",
+      link: { url: "https://sentinel.noeljumin.fr", label: "Disponible en ligne" },
+      summary: "<p>Sentinelle est un site web de veille géopolitique et technologique avec scraping automatisé.</p><p>Le site agrège des informations provenant de sources spécifiques toutes les 15 minutes, permettant aux utilisateurs de rester informés des dernières actualités dans ces domaines critiques.</p><p>Le scraping automatisé garantit que le contenu est toujours à jour, offrant une ressource précieuse pour les professionnels et les passionnés de géopolitique et de technologie.</p>"
+    },
+    {
       title: "DeepFake Audio/Video Temps Réel",
       description: "Réalisation d'un POC capable de réaliser un deepfake audio/vidéo en temps réel avec des ressources limitées.",
       tags: ["Python", "Docker"],
@@ -53,7 +59,6 @@ function App() {
       summary: "<p>Dans le cadre de la pré-rentré 2025 à l'ENSTA Paris, j'ai co-développé un proof of concept (POC) de deepfake audio/vidéo en temps réel.</p><p>Le système utilise des modèles d'apprentissage profond pour modifier en temps réel la voix et le visage d'une personne lors d'une vidéo en direct, permettant ainsi de créer des vidéos deepfake convaincantes avec une latence minimale (suivant les ressources machine).</p><p>Ce projet a pour but de démontrer les avancées technologiques dans le domaine du traitement audio/vidéo et la facilité avec laquelle l'on peut réaliser sa propre application de celui-ci en local avec ses propre règles. Evidemment, cela soulève de lourdes questions éthiques concernant l'utilisation de telles technologies.</p>"
     },
     {
-      id: 3,
       title: "Papier Federated Learning",
       description: "Papier co-écrit sur le Federated Learning pour la conférence EGC 2026.",
       tags: ["Python", "Flower", "PyTorch", "Pandas"],
@@ -62,7 +67,6 @@ function App() {
       summary: "<p>Dans le cadre de mon apprentissage à Stellantis, je co-écrit un papier sur le Federated Learning (FL) associé aux feedbacks utilisateurs en utilisant Kahneman-Tversky Optimization (KTO).</p><p>Notre papier a pour but d'explorer les défis et les opportunités liés à une telle implémentation sur des données quantitatives, là où l'utilisation de feedback pour le fine-tuning de modèles est plus souvent retrouvé sur des données qualitatives.</p>"
     },
     {
-      id: 4,
       title: "Enseignement sur le Federated Learning",
       description: "Enseignement en milieu industriel sur le Federated Learning et ses applications devant 80 personnes.",
       tags: ["Jupyter", "Python", "Centralized Learning", "Federated Learning"],
@@ -71,7 +75,6 @@ function App() {
       summary: "<p>Au sein de Stellantis, j'ai eu l'occasion de donner un enseignement sur le Federated Learning et ses applications devant 80 personnes de tous domaines (ingénierie, data science, management, etc.).</p><p>Lors de cet enseignement, j'ai dirigé une démonstration pratique comparant le Federated Learning au Centralized Learning à l'aide de Jupyter Notebooks et de jeux de données réels.</p><p>L'objectif était de montrer les avantages et les inconvénients du Federated Learning, ainsi que les cas d'utilisation appropriés afin de pousser les spectateurs a envisager cette technologie sur leurs applications.</p>"
     },
     {
-      id: 5,
       title: "Portfolio Personnel",
       description: "Site portfolio regroupant mes projets et compétences.",
       tags: ["React", "Vite", "CSS3"],
@@ -79,7 +82,6 @@ function App() {
       link: { url: "https://github.com/NoNo47400/Contact_Website", label: "Voir sur GitHub" }
     },
     {
-      id: 6,
       title: "Assistant Personnel IA",
       description: "Workflow N8N hébergé sur un VPS pour automatiser des tâches quotidiennes (Gestion emploi du temps, rappels, etc.).",
       tags: ["N8N", "JavaScript", "VPS", "Docker"],
@@ -88,7 +90,6 @@ function App() {
       summary: "<p>Utilisant un Iphone n'intégrant pas d'assistant performant adapté à mon usage, j'ai développé un assistant personnel en utilisant N8N, une plateforme d'automatisation de flux de travail.</p><p>Cet assistant est hébergé sur mon virtual private server (VPS) et est conçu pour automatiser diverses tâches quotidiennes telles que la gestion de mon emploi du temps, ou encore la réponse rapide à des questions.</p><p>Son intégration dans mon quotidien me permet un réel gain de temps et une meilleure organisation.</p>"
     },
     {
-      id: 7,
       title: "Automatisation de veille IA",
       description: "Workflow N8N hébergé sur un VPS pour automatiser la réalisation de résumés quotidiens sur les actualités défense, technologie et finance.",
       tags: ["N8N", "JavaScript", "VPS", "Docker"],
@@ -97,7 +98,6 @@ function App() {
       summary: "<p>Soucieux de garder une veille constante sur l'évolution technologique et géopolitique, j'ai automatisé la réalisation d'une newsletter personnalisée.</p><p>Ce workflow, hébergé sur mon serveur, collecte mes multiples newsletters quotidiennes reçues par email, extrait les informations pertinentes, et génère un résumé concis que je reçois chaque matin.</p><p>Cette automatisation me permet de rester informé efficacement sans être submergé par un trop grand volume d'informations.</p>"
     },
     {
-      id: 8,
       title: "Akinator pour Nao",
       description: "Interfacage de l'algorithme Akinator sur le robot Nao pour deviner à quel personnage l'utilisateur pense.",
       tags: ["Python", "Naoqi"],
@@ -106,7 +106,6 @@ function App() {
       summary: "<p>Dans le cadre d'un cours de robotique à l'ENSTA, j'ai réalisé, un script permettant l'interfaçage de l'algorithme Akinator avec le robot Nao.</p><p>Le robot est capable de poser des questions à l'utilisateur pour deviner le personnage auquel il pense, en utilisant les capacités de reconnaissance et de synthèse vocale de Nao.</p><p>Ce projet a permis d'explorer les interactions homme-robot et de démontrer les capacités ludiques des robots humanoïdes.</p>"
     },
     {
-      id: 9,
       title: "Capteur intracrânien de pression connecté",
       description: "Réalisation d'un capteur de pression intracrânien connecté et implémentation du protocole Ruby (protocole militaire américain) pour la transmission sécurisée des données.",
       tags: ["C++", "Python", "ESP32", "Electronique"],
@@ -115,7 +114,6 @@ function App() {
       summary: "<p>Dans le cadre d'un projet de fin d'études à l'INSA Toulouse, nous avons conçu en équipe un capteur de pression intracrânien connecté.</p><p>Je me suis personnellment chargé du développement du protocole Ruby (protocole militaire américain) en C++ afin de permettre une transmission sécurisée des données.</p><p>J'ai aussi réalisé l'interfaçage avec un backend Python que j'ai développé et dont j'ai explicité les routes et les paramètres afin que le développeur de l'interface puisse la réaliser sans soucis.</p>"
     },
     {
-      id: 10,
       title: "Développement d'un logiciel pour AOC Airbus",
       description: "Développement d'un logiciel de vérification de conformité de trames pour l'AOC d'Airbus.",
       tags: ["Python", "C", "DO-178C"],
@@ -124,7 +122,6 @@ function App() {
       summary: "<p>Dans le cadre de mon alternance chez SII, j'ai développé, au sein des équipes Airbus, un logiciel de vérification de conformité de trames pour l'AOC d'Airbus afin de répondre aux exigences de sécurité et de fiabilité du secteur aéronautique.</p><p>Cela m'a permis de prendre part au cycle de développement logiciel selon la norme DO-178C, en mettant l'accent sur la rigueur et la traçabilité des processus.</p><p>Ce projet a renforcé mes compétences en développement logiciel embarqué et m'a familiarisé avec les standards de l'industrie aéronautique.</p>"
     },
     {
-      id: 11,
       title: "Robot de recharge autonome Continental",
       description: "Contribution au développement d'un robot de recharge autonome pour véhicules électriques.",
       tags: ["C", "Rust","Kalman", "Ultra Wide Band", "ROS2"],
@@ -133,7 +130,6 @@ function App() {
       summary: "<p>Dans le cadre de mon alternance chez SII, j'ai contribué au développement d'un robot de recharge autonome pour véhicules électriques.</p><p>Ce projet m'a permis de travailler avec des technologies avancées telles que Kalman, Ultra Wide Band, et ROS2, renforçant mes compétences en algorithmie tout en respectant les normes automobiles et contraintes des systèmes embarqués.</p>"
     },
     {
-      id: 12,
       title: "Réseau PAN UWB basse consommation",
       description: "Développement d’un réseau personnel UWB ultra-basse consommation intégrant des états de veille intelligents, réduisant la consommation globale à moins de 30µA par cycle (MCU, accéléromètre, antenne inclus).",
       tags: ["C", "STM32", "UWB", "Bare Metal"],
@@ -142,7 +138,6 @@ function App() {
       summary: "<p>Lors de mon stage de recherche à l'ETS Montréal, j'ai développé un réseau personnel UWB ultra-basse consommation.</p><p>Le système, basé sur une antenne Spark Microsystems, intègre des états de veille intelligents, permettant de réduire la consommation globale à moins de 30µA par cycle, incluant le microcontrôleur, l'accéléromètre et l'antenne.</p><p>Ce projet m'a permis d'approfondir mes compétences en programmation bare metal sur STM32 et en conception de systèmes embarqués à faible consommation énergétique.</p><p>Cela m'a aussi permis de mettre en pratique mes compétences en communication et travail en équipe dans un contexte international puisque j'ai permis la remontée de problèmes de routage au niveau du PCB, causant une hausse de consommation pouvant atteindre 100µA.</p>"
     },
     {
-      id: 13,
       title: "Simulateur de réseau CAN",
       description: "Développement d'un simulateur de réseau CAN pour tester et valider des équipements embarqués pour le compte d'une start-up dans le secteur agricole.",
       tags: ["Python", "CAN"],
@@ -151,7 +146,6 @@ function App() {
       summary: "<p>Lors de mon stage chez Agreenculture, j'ai développé un simulateur de réseau CAN pour tester et valider leurs équipements embarqués destinés à l'automatisation agricole.</p><p>Ce simulateur permet de simuler des échanges de messages CAN, facilitant ainsi le développement et la validation des équipements avant leur déploiement sur le terrain.</p>"
     },
     {
-      id: 14,
       title: "Générateur automatisé de fichiers DBC",
       description: "Création d’un générateur automatisé de fichiers DBC pour faciliter l’intégration et la configuration des systèmes CAN.",
       tags: ["Python", "CAN", "DBC"],
@@ -181,28 +175,24 @@ function App() {
 
   const experiencePro = [
     {
-      id: 1,
       title: "Data Scientist (Apprentissage)",
       organization: "Stellantis",
       location: "Poissy, FR",
       period: "Sept. 2025 – Sept. 2026",
     },
     {
-      id: 2,
       title: "Ingénieur logiciel embarqué (Apprentissage)",
       organization: "SII Sud-Ouest",
       location: "Toulouse, FR",
       period: "Sept. 2022 – Sept. 2025",
     },
     {
-      id: 3,
       title: "Stagiaire en recherche",
       organization: "ETS Montréal & Spark Microsystems",
       location: "Montréal, QC, Canada",
       period: "Juin. 2024 – Sept. 2024",
     },
     {
-      id: 4,
       title: "Stagiaire technicien supérieur",
       organization: "Agreenculture",
       location: "Toulouse, FR",
@@ -212,7 +202,6 @@ function App() {
 
   const experienceAcademique = [
     {
-      id: 1,
       title: "Diplôme d’ingénieur en robotique",
       organization: "ENSTA Paris",
       period: "Sept. 2025 – Sept. 2026",
@@ -221,7 +210,6 @@ function App() {
       ]
     },
     {
-      id: 2,
       title: "Diplôme d’ingénieur en automatique et électronique",
       organization: "INSA Toulouse",
       period: "Sept. 2022 – Sept. 2025",
@@ -230,7 +218,6 @@ function App() {
       ]
     },
     {
-      id: 3,
       title: "Master de Recherche en Réseaux Embarqués et Objets Connectés",
       organization: "ENSEEIHT",
       period: "Sept. 2024 – Juil. 2025",
@@ -239,7 +226,6 @@ function App() {
       ]
     },
     {
-      id: 4,
       title: "DUT Génie Électrique et Informatique Industrielle",
       organization: "IUT Paul Sabatier de Toulouse",
       period: "Sept. 2020 – Juil. 2022",
@@ -251,7 +237,6 @@ function App() {
 
   const readings = [
     {
-      id: 1,
       category: "Startup & Entrepreneuriat",
       icon: "🚀",
       books: [
@@ -260,7 +245,6 @@ function App() {
       ]
     },
     {
-      id: 2,
       category: "Relations Humaines",
       icon: "🤝",
       books: [
@@ -269,7 +253,6 @@ function App() {
       ]
     },
     {
-      id: 3,
       category: "Géopolitique",
       icon: "🌍",
       books: [
@@ -278,7 +261,6 @@ function App() {
       ]
     },
     {
-      id: 4,
       category: "Fiction",
       icon: "📚",
       books: [
@@ -408,14 +390,14 @@ function App() {
         <div className="container">
           <h2 className="section-title">Mes Projets</h2>
           <div className="projects-grid">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               project.summary ? (
                 <div 
-                  key={project.id} 
+                  key={index} 
                   className="project-card project-card-flip"
-                  onClick={() => setFlippedProjectId(flippedProjectId === project.id ? null : project.id)}
+                  onClick={() => setFlippedProjectIndex(flippedProjectIndex === index ? null : index)}
                 >
-                  <div className={`project-card-inner ${flippedProjectId === project.id ? 'flipped' : ''}`}>
+                  <div className={`project-card-inner ${flippedProjectIndex === index ? 'flipped' : ''}`}>
                     <div className="project-card-front">
                       <div className="project-icon">{project.image}</div>
                       <h3 className="project-title">{project.title}</h3>
@@ -441,7 +423,7 @@ function App() {
                   </div>
                 </div>
               ) : (
-                <div key={project.id} className="project-card">
+                <div key={index} className="project-card">
                   <div className="project-icon">{project.image}</div>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
@@ -474,8 +456,8 @@ function App() {
             <div className="experience-column">
               <h3 className="experience-subtitle">Expérience professionnelle</h3>
               <div className="experience-list">
-                {experiencePro.map((exp) => (
-                  <div key={exp.id} className="experience-card">
+                {experiencePro.map((exp, index) => (
+                  <div key={index} className="experience-card">
                     <div className="experience-header">
                       <h4 className="experience-role">{exp.title}</h4>
                       <span className="experience-period">{exp.period}</span>
@@ -491,8 +473,8 @@ function App() {
             <div className="experience-column">
               <h3 className="experience-subtitle">Expérience académique</h3>
               <div className="experience-list">
-                {experienceAcademique.map((exp) => (
-                  <div key={exp.id} className="experience-card">
+                {experienceAcademique.map((exp, index) => (
+                  <div key={index} className="experience-card">
                     <div className="experience-header">
                       <h4 className="experience-role">{exp.title}</h4>
                       <span className="experience-period">{exp.period}</span>
@@ -518,8 +500,8 @@ function App() {
         <div className="container">
           <h2 className="section-title">Mes Lectures Favorites</h2>
           <div className="readings-grid">
-            {readings.map((category) => (
-              <div key={category.id} className="reading-category">
+            {readings.map((category, index) => (
+              <div key={index} className="reading-category">
                 <div className="category-header">
                   <span className="category-icon">{category.icon}</span>
                   <h3 className="category-title">{category.category}</h3>
