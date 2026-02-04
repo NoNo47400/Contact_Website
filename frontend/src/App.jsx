@@ -46,7 +46,7 @@ function App() {
       title: "Sentinelle",
       description: "Site web de veille géopolitique et technologique avec scraping automatisé.",
       tags: ["React", "Supabase", "Docker", "Scraping"],
-      image: "<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10'/><path d='M12 8v4'/><path d='M12 16h.01'/></svg>\" />,",
+      image: "🛡️",
       link: { url: "https://sentinel.noeljumin.fr", label: "Disponible en ligne" },
       summary: "<p>Sentinelle est un site web de veille géopolitique et technologique avec scraping automatisé.</p><p>Le site agrège des informations provenant de sources spécifiques toutes les 15 minutes, permettant aux utilisateurs de rester informés des dernières actualités dans ces domaines critiques.</p><p>Le scraping automatisé garantit que le contenu est toujours à jour, offrant une ressource précieuse pour les professionnels et les passionnés de géopolitique et de technologie.</p>"
     },
