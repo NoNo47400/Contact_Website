@@ -51,12 +51,12 @@ function App() {
       summary: "<p>Sentinelle est un site web de veille géopolitique et technologique avec scraping automatisé.</p><p>Le site agrège des informations provenant de sources spécifiques toutes les 15 minutes, permettant aux utilisateurs de rester informés des dernières actualités dans ces domaines critiques.</p><p>Le scraping automatisé garantit que le contenu est toujours à jour, offrant une ressource précieuse pour les professionnels et les passionnés de géopolitique et de technologie.</p>"
     },
     {
-      title: "DeepFake Audio/Video Temps Réel",
+      title: "DeepFake Audio/Vidéo Temps Réel",
       description: "Réalisation d'un POC capable de réaliser un deepfake audio/vidéo en temps réel avec des ressources limitées.",
       tags: ["Python", "Docker"],
       image: "📷",
       link: { url: "https://github.com/NoNo47400/DeepFake_Audio_Video_Realtime", label: "Voir sur GitHub" },
-      summary: "<p>Dans le cadre de la pré-rentré 2025 à l'ENSTA Paris, j'ai co-développé un proof of concept (POC) de deepfake audio/vidéo en temps réel.</p><p>Le système utilise des modèles d'apprentissage profond pour modifier en temps réel la voix et le visage d'une personne lors d'une vidéo en direct, permettant ainsi de créer des vidéos deepfake convaincantes avec une latence minimale (suivant les ressources machine).</p><p>Ce projet a pour but de démontrer les avancées technologiques dans le domaine du traitement audio/vidéo et la facilité avec laquelle l'on peut réaliser sa propre application de celui-ci en local avec ses propre règles. Evidemment, cela soulève de lourdes questions éthiques concernant l'utilisation de telles technologies.</p>"
+      summary: "<p>Dans le cadre de la pré-rentrée 2025 à l'ENSTA Paris, j'ai co-développé un proof of concept (POC) de deepfake audio/vidéo en temps réel.</p><p>Le système utilise des modèles d'apprentissage profond pour modifier en temps réel la voix et le visage d'une personne lors d'une vidéo en direct, permettant ainsi de créer des vidéos deepfake convaincantes avec une latence minimale (suivant les ressources machine).</p><p>Ce projet a pour but de démontrer les avancées technologiques dans le domaine du traitement audio/vidéo et la facilité avec laquelle on peut réaliser sa propre application de celui-ci en local avec ses propres règles. Évidemment, cela soulève de lourdes questions éthiques concernant l'utilisation de telles technologies.</p>"
     },
     {
       title: "Papier Federated Learning",
@@ -64,7 +64,7 @@ function App() {
       tags: ["Python", "Flower", "PyTorch", "Pandas"],
       image: "📝",
       link: { url: null, label: "Non disponible sous GitHub" },
-      summary: "<p>Dans le cadre de mon apprentissage à Stellantis, je co-écrit un papier sur le Federated Learning (FL) associé aux feedbacks utilisateurs en utilisant Kahneman-Tversky Optimization (KTO).</p><p>Notre papier a pour but d'explorer les défis et les opportunités liés à une telle implémentation sur des données quantitatives, là où l'utilisation de feedback pour le fine-tuning de modèles est plus souvent retrouvé sur des données qualitatives.</p>"
+      summary: "<p>Dans le cadre de mon apprentissage à Stellantis, je co-écris un papier sur le Federated Learning (FL) associé aux retours utilisateurs en utilisant Kahneman-Tversky Optimization (KTO).</p><p>Notre papier a pour but d'explorer les défis et les opportunités liés à une telle implémentation sur des données quantitatives, là où l'utilisation de retours pour le fine-tuning de modèles est plus souvent retrouvée sur des données qualitatives.</p>"
     },
     {
       title: "Enseignement sur le Federated Learning",
@@ -72,7 +72,7 @@ function App() {
       tags: ["Jupyter", "Python", "Centralized Learning", "Federated Learning"],
       image: "🧑🏻‍🏫",
       link: { url: null, label: "Non disponible sous GitHub" },
-      summary: "<p>Au sein de Stellantis, j'ai eu l'occasion de donner un enseignement sur le Federated Learning et ses applications devant 80 personnes de tous domaines (ingénierie, data science, management, etc.).</p><p>Lors de cet enseignement, j'ai dirigé une démonstration pratique comparant le Federated Learning au Centralized Learning à l'aide de Jupyter Notebooks et de jeux de données réels.</p><p>L'objectif était de montrer les avantages et les inconvénients du Federated Learning, ainsi que les cas d'utilisation appropriés afin de pousser les spectateurs a envisager cette technologie sur leurs applications.</p>"
+      summary: "<p>Au sein de Stellantis, j'ai eu l'occasion de donner un enseignement sur le Federated Learning et ses applications devant 80 personnes de tous domaines (ingénierie, data science, management, etc.).</p><p>Lors de cet enseignement, j'ai dirigé une démonstration pratique comparant le Federated Learning au Centralized Learning à l'aide de Jupyter Notebooks et de jeux de données réels.</p><p>L'objectif était de montrer les avantages et les inconvénients du Federated Learning, ainsi que les cas d'utilisation appropriés afin de pousser les spectateurs à envisager cette technologie sur leurs applications.</p>"
     },
     {
       title: "Portfolio Personnel",
@@ -83,11 +83,11 @@ function App() {
     },
     {
       title: "Assistant Personnel IA",
-      description: "Workflow N8N hébergé sur un VPS pour automatiser des tâches quotidiennes (Gestion emploi du temps, rappels, etc.).",
+      description: "Workflow N8N hébergé sur un VPS pour automatiser des tâches quotidiennes (gestion emploi du temps, rappels, etc.).",
       tags: ["N8N", "JavaScript", "VPS", "Docker"],
       image: "🤖",
       link: { url: null, label: "Non disponible sous GitHub" },
-      summary: "<p>Utilisant un Iphone n'intégrant pas d'assistant performant adapté à mon usage, j'ai développé un assistant personnel en utilisant N8N, une plateforme d'automatisation de flux de travail.</p><p>Cet assistant est hébergé sur mon virtual private server (VPS) et est conçu pour automatiser diverses tâches quotidiennes telles que la gestion de mon emploi du temps, ou encore la réponse rapide à des questions.</p><p>Son intégration dans mon quotidien me permet un réel gain de temps et une meilleure organisation.</p>"
+      summary: "<p>Utilisant un iPhone n'intégrant pas d'assistant performant adapté à mon usage, j'ai développé un assistant personnel en utilisant N8N, une plateforme d'automatisation de flux de travail.</p><p>Cet assistant est hébergé sur mon virtual private server (VPS) et est conçu pour automatiser diverses tâches quotidiennes telles que la gestion de mon emploi du temps, ou encore la réponse rapide à des questions.</p><p>Son intégration dans mon quotidien me permet un réel gain de temps et une meilleure organisation.</p>"
     },
     {
       title: "Automatisation de veille IA",
@@ -99,19 +99,19 @@ function App() {
     },
     {
       title: "Akinator pour Nao",
-      description: "Interfacage de l'algorithme Akinator sur le robot Nao pour deviner à quel personnage l'utilisateur pense.",
+      description: "Interfaçage de l'algorithme Akinator sur le robot Nao pour deviner à quel personnage l'utilisateur pense.",
       tags: ["Python", "Naoqi"],
       image: "🧞",
       link: { url: "https://github.com/NoNo47400/RO11_Akinator_Robotic_Project", label: "Voir sur GitHub" },
-      summary: "<p>Dans le cadre d'un cours de robotique à l'ENSTA, j'ai réalisé, un script permettant l'interfaçage de l'algorithme Akinator avec le robot Nao.</p><p>Le robot est capable de poser des questions à l'utilisateur pour deviner le personnage auquel il pense, en utilisant les capacités de reconnaissance et de synthèse vocale de Nao.</p><p>Ce projet a permis d'explorer les interactions homme-robot et de démontrer les capacités ludiques des robots humanoïdes.</p>"
+      summary: "<p>Dans le cadre d'un cours de robotique à l'ENSTA, j'ai réalisé un script permettant l'interfaçage de l'algorithme Akinator avec le robot Nao.</p><p>Le robot est capable de poser des questions à l'utilisateur pour deviner le personnage auquel il pense, en utilisant les capacités de reconnaissance et de synthèse vocale de Nao.</p><p>Ce projet a permis d'explorer les interactions homme-robot et de démontrer les capacités ludiques des robots humanoïdes.</p>"
     },
     {
-      title: "Capteur intracrânien de pression connecté",
-      description: "Réalisation d'un capteur de pression intracrânien connecté et implémentation du protocole Ruby (protocole militaire américain) pour la transmission sécurisée des données.",
-      tags: ["C++", "Python", "ESP32", "Electronique"],
+      title: "Capteur de pression intracrânienne connecté",
+      description: "Réalisation d'un capteur de pression intracrânienne connecté et implémentation du protocole RuBee (protocole militaire américain) pour la transmission sécurisée des données.",
+      tags: ["C++", "Python", "ESP32", "Électronique"],
       image: "🤖",
       link: { url: "https://github.com/NoNo47400/WispersProject/tree/main", label: "Voir sur GitHub" },
-      summary: "<p>Dans le cadre d'un projet de fin d'études à l'INSA Toulouse, nous avons conçu en équipe un capteur de pression intracrânien connecté.</p><p>Je me suis personnellment chargé du développement du protocole Ruby (protocole militaire américain) en C++ afin de permettre une transmission sécurisée des données.</p><p>J'ai aussi réalisé l'interfaçage avec un backend Python que j'ai développé et dont j'ai explicité les routes et les paramètres afin que le développeur de l'interface puisse la réaliser sans soucis.</p>"
+      summary: "<p>Dans le cadre d'un projet de fin d'études à l'INSA Toulouse, nous avons conçu en équipe un capteur de pression intracrânienne connecté.</p><p>Je me suis personnellement chargé du développement du protocole RuBee (protocole militaire américain) en C++ afin de permettre une transmission sécurisée des données.</p><p>J'ai aussi réalisé l'interfaçage avec un backend Python que j'ai développé et dont j'ai explicité les routes et les paramètres afin que le développeur de l'interface puisse la réaliser sans souci.</p>"
     },
     {
       title: "Développement d'un logiciel pour AOC Airbus",
@@ -124,14 +124,14 @@ function App() {
     {
       title: "Robot de recharge autonome Continental",
       description: "Contribution au développement d'un robot de recharge autonome pour véhicules électriques.",
-      tags: ["C", "Rust","Kalman", "Ultra Wide Band", "ROS2"],
+      tags: ["C", "Rust", "Kalman", "Ultra Wide Band", "ROS2"],
       image: "🚗",
       link: { url: null, label: "Non disponible sous GitHub" },
       summary: "<p>Dans le cadre de mon alternance chez SII, j'ai contribué au développement d'un robot de recharge autonome pour véhicules électriques.</p><p>Ce projet m'a permis de travailler avec des technologies avancées telles que Kalman, Ultra Wide Band, et ROS2, renforçant mes compétences en algorithmie tout en respectant les normes automobiles et contraintes des systèmes embarqués.</p>"
     },
     {
       title: "Réseau PAN UWB basse consommation",
-      description: "Développement d’un réseau personnel UWB ultra-basse consommation intégrant des états de veille intelligents, réduisant la consommation globale à moins de 30µA par cycle (MCU, accéléromètre, antenne inclus).",
+      description: "Développement d'un réseau personnel UWB ultra-basse consommation intégrant des états de veille intelligents, réduisant la consommation globale à moins de 30µA par cycle (MCU, accéléromètre, antenne inclus).",
       tags: ["C", "STM32", "UWB", "Bare Metal"],
       image: "🔋",
       link: { url: null, label: "Non disponible sous GitHub" },
@@ -147,11 +147,11 @@ function App() {
     },
     {
       title: "Générateur automatisé de fichiers DBC",
-      description: "Création d’un générateur automatisé de fichiers DBC pour faciliter l’intégration et la configuration des systèmes CAN.",
+      description: "Création d'un générateur automatisé de fichiers DBC pour faciliter l'intégration et la configuration des systèmes CAN.",
       tags: ["Python", "CAN", "DBC"],
       image: "📁",
       link: { url: null, label: "Non disponible sous GitHub" },
-      summary: "<p>Lors de mon stage chez Agreenculture, j'ai créé un générateur automatisé de fichiers DBC, reprenant le concept de CANoe qui un logiciel payant, pour faciliter l'intégration et la configuration des messages échangés.</p><p>Ce générateur permet d'automatiser la création de fichiers DBC, simplifiant ainsi le processus de configuration des réseaux CAN et améliorant l'efficacité du développement des systèmes embarqués.</p>"
+      summary: "<p>Lors de mon stage chez Agreenculture, j'ai créé un générateur automatisé de fichiers DBC, reprenant le concept de CANoe qui est un logiciel payant, pour faciliter l'intégration et la configuration des messages échangés.</p><p>Ce générateur permet d'automatiser la création de fichiers DBC, simplifiant ainsi le processus de configuration des réseaux CAN et améliorant l'efficacité du développement des systèmes embarqués.</p>"
     }
   ]
 
