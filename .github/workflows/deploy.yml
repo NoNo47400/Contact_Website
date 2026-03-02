@@ -31,6 +31,9 @@ jobs:
 
             cd frontend
 
+            # create .env from GitHub secrets so docker-compose can read MISTRAL_API_KEY
+            echo "MISTRAL_API_KEY=${{ secrets.MISTRAL_API_KEY }}" > .env
+
             docker stop contactpage_frontend || true
             docker rm contactpage_frontend || true
             docker compose down || true

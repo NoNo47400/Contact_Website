@@ -1,0 +1,18 @@
+{
+  "hardSkills": [
+    { "name": "C/C++", "level": 80 },
+    { "name": "Python", "level": 85 },
+    { "name": "Rust", "level": 70 },
+    { "name": "STM32/ESP32", "level": 90 },
+    { "name": "Raspberry Pi", "level": 90 },
+    { "name": "TensorFlow/PyTorch", "level": 80 },
+    { "name": "Docker", "level": 75 },
+    { "name": "Git", "level": 90 }
+  ],
+  "softSkills": [
+    { "name": "Vulgarisation scientifique", "level": 90 },
+    { "name": "Travail en équipe multiculturelle", "level": 85 },
+    { "name": "Médiation et résolution de conflits", "level": 90 },
+    { "name": "Vision systémique", "level": 90 }
+  ]
+}

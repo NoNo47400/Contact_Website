@@ -7,9 +7,11 @@ services:
     restart: always
     ports:
       - "1234:80"
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
     networks:
-      - n8n-network
+      - root_default
 
 networks:
-  n8n-network:
+  root_default:
     external: true

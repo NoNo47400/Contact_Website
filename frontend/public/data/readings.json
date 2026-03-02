@@ -1,0 +1,35 @@
+[
+  {
+    "category": "Startup & Entrepreneuriat",
+    "icon": "🚀",
+    "books": [
+      { "title": "Blitzscaling", "authors": "Reid Hoffman et Chris Yeh" },
+      { "title": "Objectif Mars !", "authors": "Bruno Martinaud et Alain Bloch" }
+    ]
+  },
+  {
+    "category": "Relations Humaines",
+    "icon": "🤝",
+    "books": [
+      { "title": "Les langages de l'amour", "authors": "Gary Chapman" },
+      { "title": "The culture map", "authors": "Erin Meyer" }
+    ]
+  },
+  {
+    "category": "Géopolitique",
+    "icon": "🌍",
+    "books": [
+      { "title": "L'aigle, le dragon et la crise planétaire", "authors": "Jean-Michel Valantin" },
+      { "title": "L'affolement du monde", "authors": "Thomas Gomart" }
+    ]
+  },
+  {
+    "category": "Fiction",
+    "icon": "📚",
+    "books": [
+      { "title": "L'appel de Cthulhu", "authors": "Howard Phillips Lovecraft" },
+      { "title": "L'étranger", "authors": "Albert Camus" },
+      { "title": "Bonne nuit Punpun", "authors": "Inio Asano" }
+    ]
+  }
+]
