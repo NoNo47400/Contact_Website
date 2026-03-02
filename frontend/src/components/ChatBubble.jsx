@@ -15,7 +15,9 @@ function ChatBubble() {
   const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const messagesEndRef = useRef(null)
-  const [apiUrl] = useState('http://localhost:3001')
+  // Use build-time Vite env var if provided, otherwise fallback to localhost in dev,
+  // or use relative paths in production so Caddy can proxy `/api`.
+  const apiUrl = import.meta.env.VITE_API_URL ?? (import.meta.env.MODE === 'development' ? 'http://localhost:3001' : '')
 
   // Scroll to bottom of messages
   const scrollToBottom = () => {
