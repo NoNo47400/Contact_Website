@@ -102,6 +102,6 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-app.listen(port, () => {
-  console.log(`✅ Backend server running on http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`✅ Backend server running on http://0.0.0.0:${port}`);
 });
