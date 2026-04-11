@@ -1,5 +1,13 @@
 [
   {
+    "title": "Quizz IA",
+    "description": "Plateforme interactive de préparation au concours du corps de l'armement avec quiz adaptatifs et suivi de progression.",
+    "tags": ["React", "Docker"],
+    "image": "🇫🇷",
+    "link": {"url": "https://quizzcorpsia.noeljumin.fr", "label": "Disponible en ligne"},
+    "summary": "<p>Quizz IA est une plateforme développée pour aider les candidats ambitieux à préparer efficacement le concours d'entrée au corps de l'armement.</p><p>Le site offre une interface intuitive avec plusieurs modes de quiz : sélection par thème pour travailler des domaines spécifiques, ou test global de 40 questions pour une préparation complète. Les utilisateurs bénéficient d'un suivi détaillé de leurs performances, identifiant ainsi les axes de progression prioritaires.</p><p>Accessible en ligne et déployée avec Docker, cette solution garantit une préparation flexible, efficace et basée sur les données.</p>"
+  },
+  {
     "title": "Greenance",
     "description": "Startup co-fondée pour l'analyse du risque environnemental des entreprises.",
     "tags": ["React", "Python", "Supabase", "Docker"],
